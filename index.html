@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dillon Zhang</title>
+    <link href="/stylesheets/reset.css" rel="stylesheet">
+    <link href="/stylesheets/main.css" rel="stylesheet">
+</head>
+<body>
+
+    <input type="checkbox" id="hamburger" class="hamburger" />
+    <header>
+        <a href="#">
+            <div class="logo card-shape"></div>
+        </a>
+        <label for="hamburger" class="hamburger-label">
+            <span class="hamburger-icon"></span>
+        </label>
+    </header>
+    <nav>
+        <ul class="nav-links">
+            <a href="#projects" onclick="document.getElementById('hamburger').checked = false">
+                <li class="nav-link card-shape">
+                    Projects
+                </li>
+            </a>
+            <a href="#experience" onclick="document.getElementById('hamburger').checked = false">
+                <li class="nav-link card-shape">
+                    Experience
+                </li>
+            </a>
+            <a href="#activities" onclick="document.getElementById('hamburger').checked = false">
+                <li class="nav-link card-shape">
+                    Activities
+                </li>
+            </a>
+            <a href="">
+                <li class="nav-link card-shape">
+                    Resume
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <div class="landing">
+        <div class="landing-center">
+            <div class="name-holder">
+                <div id="d" class="monogram"></div>
+                <span id="d-remain" class="remainder">ILLON</span>
+            </div>
+            <div class="name-holder">
+                <div id="z" class="monogram"></div>
+                <span id="z-remain" class="remainder">HANG</span>
+            </div>
+        </div>
+        <ul class="landing-sub">
+            <li class="sub-item">Software Engineer</li>
+            <li class="sub-item">Puzzle Enthusiast</li>
+            <li class="sub-item">Amateur Chef</li>
+        </ul>
+            
+    </div>
+    <section id="projects">
+        <div class="section-header">Projects</div>
+        <div class="card-holders">
+            <label class="card-holder" for="playfromhome">
+                <div class="card-content">
+                    <input type="checkbox" id="playfromhome" class="flipper">
+                    <div class="card-front card-inside">
+                        This is the front
+                    </div>
+                    <div class="card-back card-inside">
+                        this is the back
+                    </div>
+                </div>
+            </label>
+            <label class="card-holder" for="009ignite">
+                <div class="card-content">
+                    <input type="checkbox" id="009ignite" class="flipper">
+                    <div class="card-front card-inside">
+                        This is the front
+                    </div>
+                    <div class="card-back card-inside">
+                        this is the back
+                    </div>
+                </div>
+            </label>
+            <label class="card-holder" for="00bstream">
+                <div class="card-content">
+                    <input type="checkbox" id="00bstream" class="flipper">
+                    <div class="card-front card-inside">
+                        This is the front
+                    </div>
+                    <div class="card-back card-inside">
+                        this is the back
+                    </div>
+                </div>
+            </label>
+        </div>
+    </section>
+    <section id="experience">
+        <div class="section-header">Experience</div>
+        <div class="card-holders">
+            <label class="card-holder card-shape">
+                Dropbox
+            </label>
+            <label class="card-holder card-shape">
+                GoDaddy
+            </label>
+            <label class="card-holder card-shape">
+                Boxaroo
+            </label>
+            <label class="card-holder card-shape">
+                Morgan Stanley
+            </label>
+        </div>
+    </section>
+    <section id="activities">
+        <div class="section-header">Activities</div>
+        <div class="card-holders">
+            <label class="card-holder card-shape">
+                Dropbox
+            </label>
+            <label class="card-holder card-shape">
+                GoDaddy
+            </label>
+            <label class="card-holder card-shape">
+                Boxaroo
+            </label>
+            <label class="card-holder card-shape">
+                Morgan Stanley
+            </label>
+        </div>
+    </section>
+    <footer>
+        Contact Me
+    </footer>
+</body>
+</html>
