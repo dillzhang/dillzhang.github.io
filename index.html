@@ -1,139 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dillon Zhang</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Holtwood+One+SC">
     <link href="/stylesheets/reset.css" rel="stylesheet">
     <link href="/stylesheets/main.css" rel="stylesheet">
 </head>
-<body>
 
-    <input type="checkbox" id="hamburger" class="hamburger" />
-    <header>
-        <a href="#">
-            <div class="logo card-shape"></div>
-        </a>
-        <label for="hamburger" class="hamburger-label">
-            <span class="hamburger-icon"></span>
-        </label>
-    </header>
-    <nav>
-        <ul class="nav-links">
-            <a href="#projects" onclick="document.getElementById('hamburger').checked = false">
-                <li class="nav-link card-shape">
-                    Projects
-                </li>
+<body>
+    <div class="info-container">
+        <div class="full-name">Dillon Zhang</div>
+        <div class="titles">Software Engineer, Puzzle Enthusiast, Home Cook</div>
+        <div class="contacts">
+            <a href="mailto:d1998z@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icons8-mail.svg" alt="Email Icon" />
             </a>
-            <a href="#experience" onclick="document.getElementById('hamburger').checked = false">
-                <li class="nav-link card-shape">
-                    Experience
-                </li>
+            <a href="https://www.linkedin.com/in/dillonzhang/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icons8-linkedin.svg" alt="LinkedIn Icon" />
             </a>
-            <a href="#activities" onclick="document.getElementById('hamburger').checked = false">
-                <li class="nav-link card-shape">
-                    Activities
-                </li>
+            <a href="https://www.instagram.com/dill.n.thyme/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/icons8-instagram.svg" alt="Instagram Icon" />
             </a>
-            <a href="">
-                <li class="nav-link card-shape">
-                    Resume
-                </li>
-            </a>
-        </ul>
-    </nav>
-    <div class="landing">
-        <div class="landing-center">
-            <div class="name-holder">
-                <div id="d" class="monogram"></div>
-                <span id="d-remain" class="remainder">ILLON</span>
-            </div>
-            <div class="name-holder">
-                <div id="z" class="monogram"></div>
-                <span id="z-remain" class="remainder">HANG</span>
-            </div>
         </div>
-        <ul class="landing-sub">
-            <li class="sub-item">Software Engineer</li>
-            <li class="sub-item">Puzzle Enthusiast</li>
-            <li class="sub-item">Amateur Chef</li>
-        </ul>
-            
     </div>
-    <section id="projects">
-        <div class="section-header">Projects</div>
-        <div class="card-holders">
-            <label class="card-holder" for="playfromhome">
-                <div class="card-content">
-                    <input type="checkbox" id="playfromhome" class="flipper">
-                    <div class="card-front card-inside">
-                        This is the front
-                    </div>
-                    <div class="card-back card-inside">
-                        this is the back
-                    </div>
-                </div>
-            </label>
-            <label class="card-holder" for="009ignite">
-                <div class="card-content">
-                    <input type="checkbox" id="009ignite" class="flipper">
-                    <div class="card-front card-inside">
-                        This is the front
-                    </div>
-                    <div class="card-back card-inside">
-                        this is the back
-                    </div>
-                </div>
-            </label>
-            <label class="card-holder" for="00bstream">
-                <div class="card-content">
-                    <input type="checkbox" id="00bstream" class="flipper">
-                    <div class="card-front card-inside">
-                        This is the front
-                    </div>
-                    <div class="card-back card-inside">
-                        this is the back
-                    </div>
-                </div>
-            </label>
+    <div class="card-container">
+        <div class="card education">
+            <div class="institution">Stuyvesant High School</div>
+            <div class="image">
+                <img src="./images/stuyvesant.png" alt="Stuyvesant High School Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Fall 2012 - Spring 2016</div>
+                <p>Graduated with a <strong>96.14</strong>/100 GPA</p>
+                <p>Relevant Courses</p>
+                <ul>
+                    <li>Intro to Computer Science</li>
+                    <li>AP Computer Science</li>
+                    <li>Software Development</li>
+                    <li>Computer Graphics</li>
+                    <li>Systems Engineering</li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section id="experience">
-        <div class="section-header">Experience</div>
-        <div class="card-holders">
-            <label class="card-holder card-shape">
-                Dropbox
-            </label>
-            <label class="card-holder card-shape">
-                GoDaddy
-            </label>
-            <label class="card-holder card-shape">
-                Boxaroo
-            </label>
-            <label class="card-holder card-shape">
-                Morgan Stanley
-            </label>
+        <div class="card experience">
+            <div class="institution">Morgan Stanley</div>
+            <div class="image">
+                <img src="./images/morgan stanley.png" alt="Morgan Stanley Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2016</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Standardized third party applications to match the firm's branding</li>
+                    <li>Automated management of active database connections</li>
+                    <li>Designed REST service to generate JSON Web Tokens to serve as API keys</li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <section id="activities">
-        <div class="section-header">Activities</div>
-        <div class="card-holders">
-            <label class="card-holder card-shape">
-                Dropbox
-            </label>
-            <label class="card-holder card-shape">
-                GoDaddy
-            </label>
-            <label class="card-holder card-shape">
-                Boxaroo
-            </label>
-            <label class="card-holder card-shape">
-                Morgan Stanley
-            </label>
+        <div class="card experience">
+            <div class="institution">Boxaroo</div>
+            <div class="image">
+                <img src="./images/boxaroo.svg" alt="Boxaroo Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2017</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Automated puzzle using Arduinos to verify completion and assist in reset</li>
+                    <li>Designed JSON format to encode a room's progression</li>
+                    <li>Designed protocol for communicating between Express server and Arduinos</li>
+                    <li>Frabricated physical props and set pieces for the escape room</li>
+                </ul>
+            </div>
         </div>
-    </section>
-    <footer>
-        Contact Me
-    </footer>
+        <div class="card experience">
+            <div class="institution">GoDaddy</div>
+            <div class="image">
+                <img src="./images/godaddy.png" alt="GoDaddy Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2018</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Automated analysis of experiment for future personalizations</li>
+                    <li>Implemented circuit breakers to prevent cascading failures in our system</li>
+                    <li>Created dashboard for visualizing datastreams in Kubernetes clusters</li>
+                    <li>Acted as Scrum Lead, led agile prioritization, grooming, and retros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card experience">
+            <div class="institution">Dropbox</div>
+            <div class="image">
+                <img src="./images/dropbox.png" alt="Dropbox Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2019</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Designed Protobuf format for communication between Dropbox sync engines and servers</li>
+                    <li>Implemented Remote Commands to allow developers to remotely debug Dropbox's clients</li>
+                    <li>Created auto-throttler for network traffic</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card project">
+            <div class="institution">2.00b Playsentations Website</div>
+            <div class="image">
+                <img src="./images/mitmeche.png" alt="MIT Mechanical Engineering Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Spring 2020</div>
+                <a href="https://playsentations.com/" target="_blank" rel="noopener noreferrer">
+                    playsentations.com
+                </a>
+                <ul>
+                    <li>Created interactive livestream website</li>
+                    <li>Viewers could react, see comments over the video, ask questions</li>
+                    <li>Staff could adjust website themes to match the current presentation</li>
+                    <li>Added collobrative popcorn machine where players could eat popcorn kernels</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card education">
+            <div class="institution">MIT</div>
+            <div class="image">
+                <img src="./images/MIT.png" alt="Massachusetts Institute of Technology Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Fall 2016 - Spring 2020</div>
+                <p>Graduated with <strong>4.7</strong>/5 GPA</p>
+                <p>Bachelor of Science in Computer Science</p>
+                <p>Minor in Theater Arts</p>
+                <p>Relevant Courses</p>
+                <ul>
+                    <li>6.170 Software Studio</li>
+                    <li>6.831 UIUX</li>
+                    <li>6.837 Computer Graphics</li>
+                    <li>6.894 Data Visualization</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card project">
+            <div class="institution">PlayFromHome</div>
+            <div class="image">
+                <img src="./images/playfromhome.png" alt="PlayFromHome Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2020</div>
+                <a href="http://playfromhome.us/" target="_blank" rel="noopener noreferrer">
+                    playfromhome.us
+                </a>
+                <ul>
+                    <li>Created online multiplayer party games</li>
+                    <li>Spectrum: See how well you know each other by guessing where your choices lie on the spectrum</li>
+                    <li>Letters: Test your typing abilities as you race your friends to see who can figure out the phrase first</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card project">
+            <div class="institution">The VERS Project</div>
+            <div class="image">
+                <img src="./images/vers.png" alt="The VERS Project Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2020 - Winter 2021</div>
+                <div class="role">Technical Director</div>
+                <ul>
+                    <li>Created virtual escape room experience</li>
+                    <li>Implemented browser based virtual desktop for player interactions</li>
+                    <li>Automated game interactions and script for actors</li>
+                    <li>Won Best Social Gaming Experience <a href="https://winners.webbyawards.com/2022/games/features/best-social-gaming-experience/204315/the-vers-project" target="_blank" rel="noopener noreferrer">Webby</a> in 2022</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card project">
+            <div class="institution">2.009 Presentation Website</div>
+            <div class="image">
+                <img src="./images/mitmeche.png" alt="MIT Mechanical Engineering Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Fall 2020, 2021, 2022</div>
+                <a href="https://www.009move.com/" target="_blank" rel="noopener noreferrer">
+                    009move.com
+                </a>
+                <ul>
+                    <li>Created ticket reservation</li>
+                    <li>Students could allocate tickets for friends and family</li>
+                    <li>Staff could reserve tickets for VIPs, administrations, and friends of the class </li>
+                    <li>Interested viewers could apply via lottery system that would randomly drawer winners</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card experience">
+            <div class="institution">Dropbox</div>
+            <div class="image">
+                <img src="./images/dropbox.png" alt="Dropbox Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2020 - Current</div>
+                <div class="role">Software Engineer</div>
+                <ul>
+                    <li>Designed deterministic randomized testing for File Provider Sync Engine</li>
+                    <li>Automated and parallelized tests for continous integration pipeline</li>
+                    <li>Implemented mitigated placeholder experience when kernel extensions were deprecated in macOS 12.3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
