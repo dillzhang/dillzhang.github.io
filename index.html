@@ -35,106 +35,74 @@
             </a>
         </div>
     </div>
-    <div class="card-container">
-        <div class="card education">
-            <div class="institution">Stuyvesant High School</div>
-            <div class="image">
-                <img src="./images/stuyvesant.png" alt="Stuyvesant High School Logo" />
-            </div>
-            <div class="description">
-                <div class="time-frame">Fall 2012 - Spring 2016</div>
-                <p>Graduated with a <strong>96.14</strong>/100 GPA</p>
-                <p>Relevant Courses</p>
-                <ul>
-                    <li>Intro to Computer Science</li>
-                    <li>AP Computer Science</li>
-                    <li>Software Development</li>
-                    <li>Computer Graphics</li>
-                    <li>Systems Engineering</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card experience">
-            <div class="institution">Morgan Stanley</div>
-            <div class="image">
-                <img src="./images/morgan stanley.png" alt="Morgan Stanley Logo" />
-            </div>
-            <div class="description">
-                <div class="time-frame">Summer 2016</div>
-                <div class="role">Software Engineering Intern</div>
-                <ul>
-                    <li>Standardized third party applications to match the firm's branding</li>
-                    <li>Automated management of active database connections</li>
-                    <li>Designed REST service to generate JSON Web Tokens to serve as API keys</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card experience">
-            <div class="institution">Boxaroo</div>
-            <div class="image">
-                <img src="./images/boxaroo.svg" alt="Boxaroo Logo" />
-            </div>
-            <div class="description">
-                <div class="time-frame">Summer 2017</div>
-                <div class="role">Software Engineering Intern</div>
-                <ul>
-                    <li>Automated puzzle using Arduinos to verify completion and assist in reset</li>
-                    <li>Designed JSON format to encode a room's progression</li>
-                    <li>Designed protocol for communicating between Express server and Arduinos</li>
-                    <li>Fabricated physical props and set pieces for the escape room</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card experience">
-            <div class="institution">GoDaddy</div>
-            <div class="image">
-                <img src="./images/godaddy.png" alt="GoDaddy Logo" />
-            </div>
-            <div class="description">
-                <div class="time-frame">Summer 2018</div>
-                <div class="role">Software Engineering Intern</div>
-                <ul>
-                    <li>Automated analysis of experiment for future personalizations</li>
-                    <li>Implemented circuit breakers to prevent cascading failures in our system</li>
-                    <li>Created dashboard for visualizing datastreams in Kubernetes clusters</li>
-                    <li>Acted as Scrum Lead, led agile prioritization, grooming, and retros</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card experience">
+    <div class="card-container" style="--card-count: 11">
+        <div class="card experience" style="--i: 1">
             <div class="institution">Dropbox</div>
             <div class="image">
                 <img src="./images/dropbox.png" alt="Dropbox Logo" />
             </div>
             <div class="description">
-                <div class="time-frame">Summer 2019</div>
-                <div class="role">Software Engineering Intern</div>
+                <div class="time-frame">Summer 2020 - Current</div>
+                <div class="role">Software Engineer</div>
                 <ul>
-                    <li>Designed Protobuf format for communication between Dropbox sync engines and servers</li>
-                    <li>Implemented Remote Commands to allow developers to remotely debug Dropbox's clients</li>
-                    <li>Created auto-throttler for network traffic</li>
+                    <li>Designed deterministic randomized testing for File Provider Sync Engine</li>
+                    <li>Automated and parallelized tests for continous integration pipeline</li>
+                    <li>Implemented mitigated placeholder experience when kernel extensions were deprecated in macOS 12.3</li>
                 </ul>
             </div>
         </div>
-        <div class="card project">
-            <div class="institution">2.00b Playsentations Website</div>
+        <div class="card project" style="--i: 2">
+            <div class="institution">2.009 Presentation Website</div>
             <div class="image">
                 <img src="./images/mitmeche.png" alt="MIT Mechanical Engineering Logo" />
             </div>
             <div class="description">
-                <div class="time-frame">Spring 2020</div>
-                <a href="https://playsentations.com/" target="_blank" rel="noopener noreferrer">
-                    playsentations.com
+                <div class="time-frame">Fall 2020, 2021, 2022</div>
+                <a href="https://www.009move.com/" target="_blank" rel="noopener noreferrer">
+                    009move.com
                 </a>
                 <ul>
-                    <li>Created interactive livestream website</li>
-                    <li>Viewers could react, see comments over the video, ask questions</li>
-                    <li>Staff could adjust website themes to match the current presentation</li>
-                    <li>Added collaborative popcorn machine where players could eat popcorn kernels</li>
+                    <li>Created ticket reservation</li>
+                    <li>Students could allocate tickets for friends and family</li>
+                    <li>Staff could reserve tickets for VIPs, administrations, and friends of the class </li>
+                    <li>Interested viewers could apply via lottery system that would randomly draw winners</li>
                 </ul>
             </div>
         </div>
-        <div class="card education">
+        <div class="card project" style="--i: 3">
+            <div class="institution">The VERS Project</div>
+            <div class="image">
+                <img src="./images/vers.png" alt="The VERS Project Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2020 - Winter 2021</div>
+                <div class="role">Technical Director</div>
+                <ul>
+                    <li>Created virtual escape room experience</li>
+                    <li>Implemented browser based virtual desktop for player interactions</li>
+                    <li>Automated game interactions and script for actors</li>
+                    <li>Won Best Social Gaming Experience <a href="https://winners.webbyawards.com/2022/games/features/best-social-gaming-experience/204315/the-vers-project" target="_blank" rel="noopener noreferrer">Webby</a> in 2022</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card project" style="--i: 4">
+            <div class="institution">PlayFromHome</div>
+            <div class="image">
+                <img src="./images/playfromhome.png" alt="PlayFromHome Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2020</div>
+                <a href="http://playfromhome.us/" target="_blank" rel="noopener noreferrer">
+                    playfromhome.us
+                </a>
+                <ul>
+                    <li>Created online multiplayer party games</li>
+                    <li>Spectrum: See how well you know each other by guessing where your choices lie on the spectrum</li>
+                    <li>Letters: Test your typing abilities as you race your friends to see who can figure out the phrase first</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card education" style="--i: 5">
             <div class="institution">MIT</div>
             <div class="image">
                 <img src="./images/MIT.png" alt="Massachusetts Institute of Technology Logo" />
@@ -153,69 +121,101 @@
                 </ul>
             </div>
         </div>
-        <div class="card project">
-            <div class="institution">PlayFromHome</div>
-            <div class="image">
-                <img src="./images/playfromhome.png" alt="PlayFromHome Logo" />
-            </div>
-            <div class="description">
-                <div class="time-frame">Summer 2020</div>
-                <a href="http://playfromhome.us/" target="_blank" rel="noopener noreferrer">
-                    playfromhome.us
-                </a>
-                <ul>
-                    <li>Created online multiplayer party games</li>
-                    <li>Spectrum: See how well you know each other by guessing where your choices lie on the spectrum</li>
-                    <li>Letters: Test your typing abilities as you race your friends to see who can figure out the phrase first</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card project">
-            <div class="institution">The VERS Project</div>
-            <div class="image">
-                <img src="./images/vers.png" alt="The VERS Project Logo" />
-            </div>
-            <div class="description">
-                <div class="time-frame">Summer 2020 - Winter 2021</div>
-                <div class="role">Technical Director</div>
-                <ul>
-                    <li>Created virtual escape room experience</li>
-                    <li>Implemented browser based virtual desktop for player interactions</li>
-                    <li>Automated game interactions and script for actors</li>
-                    <li>Won Best Social Gaming Experience <a href="https://winners.webbyawards.com/2022/games/features/best-social-gaming-experience/204315/the-vers-project" target="_blank" rel="noopener noreferrer">Webby</a> in 2022</li>
-                </ul>
-            </div>
-        </div>
-        <div class="card project">
-            <div class="institution">2.009 Presentation Website</div>
+        <div class="card project" style="--i: 6">
+            <div class="institution">2.00b Playsentations Website</div>
             <div class="image">
                 <img src="./images/mitmeche.png" alt="MIT Mechanical Engineering Logo" />
             </div>
             <div class="description">
-                <div class="time-frame">Fall 2020, 2021, 2022</div>
-                <a href="https://www.009move.com/" target="_blank" rel="noopener noreferrer">
-                    009move.com
+                <div class="time-frame">Spring 2020</div>
+                <a href="https://playsentations.com/" target="_blank" rel="noopener noreferrer">
+                    playsentations.com
                 </a>
                 <ul>
-                    <li>Created ticket reservation</li>
-                    <li>Students could allocate tickets for friends and family</li>
-                    <li>Staff could reserve tickets for VIPs, administrations, and friends of the class </li>
-                    <li>Interested viewers could apply via lottery system that would randomly draw winners</li>
+                    <li>Created interactive livestream website</li>
+                    <li>Viewers could react, see comments over the video, ask questions</li>
+                    <li>Staff could adjust website themes to match the current presentation</li>
+                    <li>Added collaborative popcorn machine where players could eat popcorn kernels</li>
                 </ul>
             </div>
         </div>
-        <div class="card experience">
+        <div class="card experience" style="--i: 7">
             <div class="institution">Dropbox</div>
             <div class="image">
                 <img src="./images/dropbox.png" alt="Dropbox Logo" />
             </div>
             <div class="description">
-                <div class="time-frame">Summer 2020 - Current</div>
-                <div class="role">Software Engineer</div>
+                <div class="time-frame">Summer 2019</div>
+                <div class="role">Software Engineering Intern</div>
                 <ul>
-                    <li>Designed deterministic randomized testing for File Provider Sync Engine</li>
-                    <li>Automated and parallelized tests for continous integration pipeline</li>
-                    <li>Implemented mitigated placeholder experience when kernel extensions were deprecated in macOS 12.3</li>
+                    <li>Designed Protobuf format for communication between Dropbox sync engines and servers</li>
+                    <li>Implemented Remote Commands to allow developers to remotely debug Dropbox's clients</li>
+                    <li>Created auto-throttler for network traffic</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card experience" style="--i: 8">
+            <div class="institution">GoDaddy</div>
+            <div class="image">
+                <img src="./images/godaddy.png" alt="GoDaddy Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2018</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Automated analysis of experiment for future personalizations</li>
+                    <li>Implemented circuit breakers to prevent cascading failures in our system</li>
+                    <li>Created dashboard for visualizing datastreams in Kubernetes clusters</li>
+                    <li>Acted as Scrum Lead, led agile prioritization, grooming, and retros</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card experience" style="--i: 9">
+            <div class="institution">Boxaroo</div>
+            <div class="image">
+                <img src="./images/boxaroo.svg" alt="Boxaroo Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2017</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Automated puzzle using Arduinos to verify completion and assist in reset</li>
+                    <li>Designed JSON format to encode a room's progression</li>
+                    <li>Designed protocol for communicating between Express server and Arduinos</li>
+                    <li>Fabricated physical props and set pieces for the escape room</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card experience" style="--i: 10">
+            <div class="institution">Morgan Stanley</div>
+            <div class="image">
+                <img src="./images/morgan stanley.png" alt="Morgan Stanley Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Summer 2016</div>
+                <div class="role">Software Engineering Intern</div>
+                <ul>
+                    <li>Standardized third party applications to match the firm's branding</li>
+                    <li>Automated management of active database connections</li>
+                    <li>Designed REST service to generate JSON Web Tokens to serve as API keys</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card education" style="--i: 11">
+            <div class="institution">Stuyvesant High School</div>
+            <div class="image">
+                <img src="./images/stuyvesant.png" alt="Stuyvesant High School Logo" />
+            </div>
+            <div class="description">
+                <div class="time-frame">Fall 2012 - Spring 2016</div>
+                <p>Graduated with a <strong>96.14</strong>/100 GPA</p>
+                <p>Relevant Courses</p>
+                <ul>
+                    <li>Intro to Computer Science</li>
+                    <li>AP Computer Science</li>
+                    <li>Software Development</li>
+                    <li>Computer Graphics</li>
+                    <li>Systems Engineering</li>
                 </ul>
             </div>
         </div>

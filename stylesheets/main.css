@@ -269,6 +269,8 @@ body {
         justify-content: center;
         flex-wrap: nowrap;
         pointer-events: none;
+
+        flex-direction: row-reverse;
     }
 
     .card {
@@ -281,11 +283,12 @@ body {
         transition: transform 50ms;
 
         pointer-events: auto;
+        z-index: calc(var(--card-count) - var(--i));
     }
 
     .card:hover {
         transform: translate(calc(var(--overlap) / 2), -15px);
         transition: transform 200ms;
-        z-index: 10;
+        z-index: calc(var(--card-count) * 2);
     }
 }
