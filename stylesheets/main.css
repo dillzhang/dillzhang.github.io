@@ -26,7 +26,7 @@ body {
 .info-container {
     padding-top: 15vh;
     height: 70vh;
-    width: 100vw;
+    /* width: 100vw; */
 
     display: flex;
     flex-direction: column;
@@ -87,6 +87,10 @@ body {
     justify-content: space-around;
 }
 
+.display-toggle {
+    display: none;
+}
+
 .card {
     --card-border-radius: 20px;
     --card-border-width: 8px;
@@ -107,7 +111,7 @@ body {
     border-color: var(--border-color);
     border-radius: var(--card-border-radius);
 
-    background-color: var(--white);
+    background-color: var(--border-color);
     
     margin: 0 10px 50px 10px;
 
@@ -152,7 +156,7 @@ body {
 }
 
 .card .institution {
-    width: 101%;
+    align-self: start;
 
     background-color: var(--border-color);
     color: var(--white);
@@ -186,6 +190,8 @@ body {
     width: 100%;
     flex-grow: 1;
     padding: 16px 8px;
+
+    background-color: var(--white);
 }
 
 .description {
@@ -247,15 +253,27 @@ body {
 
 @media (min-width: 1100px) {
     html {
-        background-size: cover;
+        background: none;
     }
     .info-container {
+        background-image: url("../images/felt.jpg");
+        background-size: cover;
+
+        position: sticky;
+        top: 0;
+
         height: 100vh;
+        width: 100%;
+        
         padding-top: 0;
         font-size: 20px;
     }
 
     .card-container {
+        pointer-events: none;
+    }
+
+    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container {
         position: absolute;
 
         top: 0px;
@@ -268,26 +286,77 @@ body {
         align-items: flex-end;
         justify-content: center;
         flex-wrap: nowrap;
-        pointer-events: none;
-
-        flex-direction: row-reverse;
     }
 
+    .info-container:has(input[type="checkbox"]:checked) ~ .card-container {
+        margin: 0 100px;
+        transform: translate(0, -270px);
+    }
+
+    .display-toggle {
+        pointer-events: auto;
+
+        display: initial;
+        position: absolute;
+
+        cursor: pointer;
+
+        right: 5px;
+        bottom: 5px;
+
+        opacity: 70%;
+
+        z-index: 1000;
+    }
+
+    .display-toggle:hover {
+        opacity: 90%;
+    }
+
+    .display-toggle input {
+        display: none;
+    }
+
+    .display-toggle img {
+        height: 30px;
+        width: 30px;
+    }
+    
     .card {
-        --overlap: calc((100vw - 100px - var(--card-width)) / 10 - var(--card-width));
+        pointer-events: auto;
+    }
+
+    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card {
+        --overlap: calc((100vw - 200px - var(--card-width)) / 10 - var(--card-width));
+        --initial-offset: 220px;
+        --offset-magnitude: 3px;
         margin-left: 0;
         margin-right: var(--overlap);
         flex-shrink: 0;
         margin-bottom: 0px;
-        transform: translate(calc(var(--overlap) / 2), 290px);
         transition: transform 50ms;
+        transform: rotate(var(--rotation-angle)) translate(calc(var(--overlap) / 2), var(--v-offset));
 
-        pointer-events: auto;
+        box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.5);
         z-index: calc(var(--card-count) - var(--i));
     }
 
-    .card:hover {
-        transform: translate(calc(var(--overlap) / 2), -15px);
+    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card:nth-child(2n) {
+        --rotation-angle: 1deg;
+        --v-offset: calc(var(--initial-offset) + var(--offset-magnitude));
+    }
+
+    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card:nth-child(2n + 1) {
+        --rotation-angle: -2deg;
+        --v-offset: calc(var(--initial-offset) - var(--offset-magnitude));
+    }
+
+    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card .institution {
+        margin: 0 0 0 auto;
+    }
+
+    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card:hover {
+        transform: rotate(0deg) translate(calc(var(--overlap) / 2), -15px);
         transition: transform 200ms;
         z-index: calc(var(--card-count) * 2);
     }
