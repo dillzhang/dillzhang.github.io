@@ -2,13 +2,19 @@
     font-family: "Roboto", sans-serif;
     --violet: #392e84;
     --red: #a3221f;
-    --slate: #58707d;
+    --slate: #42535d;
 
     --white: #eee;
+
+    --card-border-radius: 20px;
+    --card-border-width: 8px;
+
+    --card-width: 300px;
+    --card-height: calc(var(--card-width) * 3 / 2);
 }
 
 html {
-    background-image: url("../images/felt.jpg");
+    background-color: black;
     background-size: repeat;
     scroll-behavior: smooth;
 }
@@ -24,9 +30,13 @@ body {
 }
 
 .info-container {
-    padding-top: 15vh;
-    height: 70vh;
-    /* width: 100vw; */
+    background-image: url("../images/felt.jpg");
+    position: fixed;
+    top: 0;
+
+    padding-bottom: 15vh;
+    height: 100vh;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -80,11 +90,19 @@ body {
 }
 
 .card-container {
+    position: absolute;
+    top: calc(100vh - 235px);
+
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;    
-    justify-content: space-around;
+
+    width: 100vw;
+    overflow-x: scroll;
+
+    scroll-snap-type: x proximity;
+    --space-between-cards: calc(100vw - var(--card-width));
+    padding: 50px var(--space-between-cards);
+    gap: calc(var(--space-between-cards) - 50px);
 }
 
 .display-toggle {
@@ -92,11 +110,8 @@ body {
 }
 
 .card {
-    --card-border-radius: 20px;
-    --card-border-width: 8px;
-
-    --card-width: 300px;
-    --card-height: calc(var(--card-width) * 3 / 2);
+    flex-shrink: 0;
+    scroll-snap-align: center;
 
     display: flex;
     flex-direction: column;
@@ -112,8 +127,6 @@ body {
     border-radius: var(--card-border-radius);
 
     background-color: var(--border-color);
-    
-    margin: 0 10px 50px 10px;
 
     box-shadow: -4px 4px 0 2px rgba(0,0,0,0.5);
 }
@@ -192,6 +205,8 @@ body {
     padding: 16px 8px;
 
     background-color: var(--white);
+
+    border-radius: 0 0 0 calc(var(--card-border-radius) - var(--card-border-width));
 }
 
 .description {
@@ -243,7 +258,7 @@ body {
 }
 
 .description a {
-    color: var(--border-color);
+    color: var(#0000EE);
     text-decoration: underline;
 }
 
@@ -253,47 +268,47 @@ body {
 
 @media (min-width: 1100px) {
     html {
-        background: none;
+        background-image: none;
     }
+    
     .info-container {
-        background-image: url("../images/felt.jpg");
         background-size: cover;
 
-        position: sticky;
-        top: 0;
-
-        height: 100vh;
-        width: 100%;
-        
-        padding-top: 0;
         font-size: 20px;
     }
 
-    .card-container {
-        pointer-events: none;
+    .info-container:has(input[type="checkbox"]) ~ .card-container {
+        right: 0px;
+        left: 0px;
+
+        width: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: auto;
+
+        gap: 30px;
+        padding: 0;
+        margin: 0 50px;
+        padding-bottom: 50px;
     }
 
     .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container {
-        position: absolute;
-
         top: 0px;
-        right: 0px;
         bottom: 0px;
-        left: 0px;
 
         overflow: hidden;
 
         align-items: flex-end;
         justify-content: center;
         flex-wrap: nowrap;
+
+        gap: 0;
+        margin: 0;
+        padding-bottom: 0;
+        pointer-events: none;
     }
 
-    .info-container:has(input[type="checkbox"]:checked) ~ .card-container {
-        margin: 0 100px;
-        transform: translate(0, -270px);
-    }
-
-    .display-toggle {
+    .display-toggle:has(input) {
         pointer-events: auto;
 
         display: initial;
@@ -329,7 +344,9 @@ body {
     .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card {
         --overlap: calc((100vw - 200px - var(--card-width)) / 10 - var(--card-width));
         --initial-offset: 220px;
-        --offset-magnitude: 3px;
+        --magnitude: calc(var(--card-count) / 2 - var(--i));
+        --rotation-angle: calc((var(--magnitude) + 2) * -1deg);
+        --v-offset: calc(var(--initial-offset) + (var(--magnitude) * var(--magnitude) + var(--i) * 1) * 1px - 5px);
         margin-left: 0;
         margin-right: var(--overlap);
         flex-shrink: 0;
@@ -339,16 +356,6 @@ body {
 
         box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.5);
         z-index: calc(var(--card-count) - var(--i));
-    }
-
-    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card:nth-child(2n) {
-        --rotation-angle: 1deg;
-        --v-offset: calc(var(--initial-offset) + var(--offset-magnitude));
-    }
-
-    .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card:nth-child(2n + 1) {
-        --rotation-angle: -2deg;
-        --v-offset: calc(var(--initial-offset) - var(--offset-magnitude));
     }
 
     .info-container:has(input[type="checkbox"]:not(:checked)) ~ .card-container .card .institution {
